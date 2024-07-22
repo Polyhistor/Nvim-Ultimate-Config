@@ -6,6 +6,15 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "lervag/vimtex",
+    ft = {"tex", "pdf"},
+    lazy = false,
+    config = function()
+      vim.g.vimtex_view_method="zathura"
+      vim.g.vimtex_compiler_method="latexmk"
+    end
+  }
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
