@@ -62,5 +62,14 @@ return {
         snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
       ]])
     end,
-  }
+  },
+       {
+       "Mofiqul/vscode.nvim",
+       lazy = false,
+       priority = 1000,
+       config = function()
+         vim.cmd[[colorscheme vscode]]
+       end,
+     }
+
 }
