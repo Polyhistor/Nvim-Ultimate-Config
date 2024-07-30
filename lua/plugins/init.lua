@@ -39,7 +39,7 @@ return {
   },
    {
     "L3MON4D3/LuaSnip",
-    dependencies = { 
+    dependencies = {
       "rafamadriz/friendly-snippets",
       "honza/vim-snippets"
     },
@@ -70,6 +70,9 @@ return {
        config = function()
          vim.cmd[[colorscheme vscode]]
        end,
-     }
+     },
+    {
+    'grvcoelho/vim-javascript-snippets', 
+    }
 
 }
