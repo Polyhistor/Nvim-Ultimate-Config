@@ -112,7 +112,37 @@ return {
     end,
   },
 }
+    },
 
-    }
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "mxsdev/nvim-dap-vscode-js",
+    },
+    config = function()
+      local dap = require("dap")
+      local dapui = require("dapui")
 
+      dapui.setup()
+
+      require("dap-vscode-js").setup({
+        debugger_path = vim.fn.stdpath("data") .. "/lazy/vscode-js-debug",
+        adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' },
+      })
+
+      -- Keymaps
+         vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Start/Continue debugging" })
+      vim.keymap.set("n", "<leader>do", dap.step_over, { desc = "Step over" })
+      vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "Step into" })
+      vim.keymap.set("n", "<leader>dt", dap.step_out, { desc = "Step out" })
+      vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+      vim.keymap.set("n", "<leader>dr", dapui.toggle, { desc = "Toggle debug UI" })
+        
+         -- Open dapui automatically when debugging starts
+      dap.listeners.after.event_initialized["dapui_config"] = dapui.open
+      dap.listeners.before.event_terminated["dapui_config"] = dapui.close
+      dap.listeners.before.event_exited["dapui_config"] = dapui.close
+    end,
+  },
 }
