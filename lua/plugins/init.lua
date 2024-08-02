@@ -70,9 +70,6 @@ return {
          vim.cmd[[colorscheme vscode]]
        end,
      },
-    {
-    'grvcoelho/vim-javascript-snippets',
-    {
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -109,9 +106,6 @@ return {
       })
     end,
   },
-}
-    },
-
   {
     "mfussenegger/nvim-dap",
     dependencies = {
