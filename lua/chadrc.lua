@@ -1,11 +1,11 @@
 -- This file needs to have same structure as nvconfig.lua 
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
-
+ x
 ---@type ChadrcConfig
 local M = {}
 
 M.ui = {
-	theme = "onedark",
+
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -13,4 +13,4 @@ M.ui = {
 	-- },
 }
 
-return M
+return M 
