@@ -21,5 +21,17 @@ return {
   },
   {
     'neovim/nvim-lspconfig',  
+  },
+      {"nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "lua",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        -- Add any other languages you commonly use
+      },
+    },
   }
 } 
