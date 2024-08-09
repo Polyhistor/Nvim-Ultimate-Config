@@ -11,7 +11,7 @@ return {
     {
     require "plugins.luasnip"
   },
-      { 
+      {
     require "plugins.vsCodeTheme"
    }
 }
