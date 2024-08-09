@@ -11,7 +11,18 @@ return {
     {
     require "plugins.luasnip"
   },
-      {
-    require "plugins.vsCodeTheme"
-   }
-}
+  {
+    "williamboman/mason.nvim",
+    opts={
+      ensure_installed = {
+      "typescript-language-server"
+      }
+    }
+  },
+  {
+    'neovim/nvim-lspconfig', 
+    config = function()
+      require "configs.lspconfig"
+    end
+  }
+} 
