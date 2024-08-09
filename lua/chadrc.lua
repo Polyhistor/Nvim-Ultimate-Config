@@ -1,19 +1,15 @@
--- This file needs to have same structure as nvconfig.lua 
+-- nfig.lua
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
 local M = {}
 
-
-
-
 M.ui = {
-	 theme = "vscode_dark",
+  theme = "vscode_dark",
 }
 
-
 M.base46 = {
-    hl_override = {
+  hl_override = {
     -- Targeting more specific property-related highlight groups
     ["@property"] = { fg = "#9CDCFE" },
     ["@field"] = { fg = "#9CDCFE" },
@@ -37,7 +33,7 @@ M.base46 = {
     ["@constant"] = { fg = "#4FC1FF" },
     ["@constant.builtin"] = { fg = "#569CD6" },
     ["@variable.builtin"] = { fg = "#569CD6" },
-    ["@type"] = { fg = "#4EC9B0" },
+    ["@type"] = { fg = "#4EC9B0" }, -- General type
     ["@constructor"] = { fg = "#4EC9B0" },
     ["@comment"] = { fg = "#6A9955", italic = true },
 
@@ -50,7 +46,20 @@ M.base46 = {
     Boolean = { fg = "#569CD6" },
     Constant = { fg = "#4FC1FF" },
     Operator = { fg = "#D4D4D4" },
+
+    -- TypeScript specific overrides
+    ["@type.ts"] = { fg = "#4EC9B0" }, -- Ensure types in TS files are green
+    ["@type.builtin.ts"] = { fg = "#4EC9B0" },
+    ["@type.definition.ts"] = { fg = "#4EC9B0" },
+    ["@type.qualifier.ts"] = { fg = "#4EC9B0" },
+    ["@type.tsx"] = { fg = "#4EC9B0" },
+    ["@lsp.type.type"] = { fg = "#4EC9B0" },
+    ["@lsp.type.builtin"] = { fg = "#4EC9B0" },
+    ["@lsp.type.keyword.ts"] = { fg = "#4EC9B0" },
+    ["@lsp.type.keyword.tsx"] = { fg = "#4EC9B0" },
+    ["@typescript"] = { fg = "#4EC9B0" },
   },
 }
 
 return M
+
