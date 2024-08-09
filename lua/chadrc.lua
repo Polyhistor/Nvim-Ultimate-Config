@@ -8,7 +8,8 @@ local M = {}
 
 
 M.ui = {
-	theme = "onedark",
+	 theme = "vscode_dark",
+
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -16,6 +17,15 @@ M.ui = {
 	-- },
 }
 
+M.base46 = {
+  -- ... other configurations ...
 
+  hl_override = {
+    ["@property"] = { fg = "cyan" },
+    ["@field"] = { fg = "cyan" },
+  },
+
+  -- ... other configurations ...
+}
 
 return M
