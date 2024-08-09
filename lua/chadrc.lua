@@ -8,12 +8,14 @@ local M = {}
 
 
 M.ui = {
-	theme = "vscode",
+	theme = "onedark",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+
+
 
 return M
